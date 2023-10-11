@@ -14,6 +14,11 @@
 </head>
 <body>
 
+<!-- "To the top" - button -->
+<button id="to-the-top" class="hide-btn" onclick="toTheTop()">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
 <!-- Main menu -->
 <section class="section menu">
 
@@ -36,14 +41,13 @@
 
     <hr>
     <div id="main-menu">
-       <div class="main-menu-items">Utveckling oich tillväxt</div>
-       <div class="main-menu-items">Hälsa och vård</div>
-       <div class="main-menu-items">Kultur</div>
-       <div class="main-menu-items">Jobb och karriär</div> 
-       <div class="main-menu-items">Våra skolor</div>
-       <div class="main-menu-items">Demokrati och politik</div>
-       <div class="main-menu-items">Om Region Halland</div>
-
+       <div class="main-menu-items"><h5>Utveckling oich tillväxt</h5></div>
+       <div class="main-menu-items"><h5>Hälsa och vård</h5></div>
+       <div class="main-menu-items"><h5>Kultur</h5></div>
+       <div class="main-menu-items"><h5>Jobb och karriär</h5></div> 
+       <div class="main-menu-items"><h5>Våra skolor</h5></div>
+       <div class="main-menu-items"><h5>Demokrati och politik</h5></div>
+       <div class="main-menu-items"><h5>Om Region Halland</5h></div>
     </div>
     <hr>
 </div>
@@ -120,16 +124,110 @@
 
 <!-- Section 4 - "Nyheter" -->
 <Section class="section news">
+
     <h1>Nyheter</h1>
+
+    <!-- Article 1 -->
     <article class="article">
-        <h2>Publiksuccé för PLAY filmdagar</h2>
+        <a href="#"><h2>Publiksuccé för PLAY filmdagar</h2>
         <p>Lördagen den 23 september fylldes kulturhuset för unga, Nolltrefem, med filmintresserade barn, unga och vuxna som alla ville testa olika filmrelaterade workshoppar. Totalt 120 personer besökte huset under dagen och släppte loss sin kreativitet. Alla är vinnare i lättvikt Filmer...</p>
-        <p class="light">Publicerad: 2023-10-06</p>
+        <p class="light">Publicerad: 2023-10-08</p></a>
         <a class="hashtag" href="#">Kultur</a>
         </h2>
     </article>
+
+    <!-- Article 2 -->
+        <article class="article">
+            <a href="#"><h2>Katrinebergs folkhögskola får Almega Friskvårdsföretagens "Frisk-licens" och godkännande från Kroppsterapeuternas Yrkesförbund</h2>
+            <p>Katrinebergs folkhögskolas PT-linje blev nyligen godkänd av två branschorganisationer – Almega Friskvårdsföretagen och Kroppsterapeuternas Yrkesförbund. Utmärkelsen bekräftar skolans fortsatta engagemang för att erbjuda högkvalitativ och branschgodkänd utbildning för blivande personliga tränare, som nu dessutom får licens. Almega Friskvårdsföretagen, arbetsgivarorganisationen för...</p>
+            <p class="light">Publicerad: 2023-10-10</p></a>
+            <a class="hashtag" href="#">Våra skolor</a>
+            </h2>
+        </article>
+
+    <!-- Article 3 -->
+    <article class="article">
+        <a href="#"><h2>’’Odla din hatt’’ – teaterdockor ska få nya halmhattar</h2>
+        <p>Föreningen Gröna Lådan har i höst sått svedjeråg på två kvadratmeter mark som de har lånat av en ekobonde utanför Varberg.  Rågen ska skördas nästa sommar och sedan bli till halmhattar  till föreningens teaterdockor. Annika och dockorna. Dockorna är tillverkade...</p>
+        <p class="light">Publicerad: 2023-10-06</p></a>
+        <a class="hashtag" href="#">Kultur</a>
+        </h2>
+    </article>
+
+    <!-- Article 4 -->
+    <article class="article">
+        <a href="#"><h2>Äppelveckor på biblioteken i Halland 16-29 oktober</h2>
+            <p>Vad har Funkibator, Kaosteknik och Älskad från första stund gemensamt? Jo, de är titlar på föreläsningar som ges under Äppelveckorna i Halland! Under äppelveckorna 16–29 oktober bjuder vi in till olika aktiviteter på biblioteken, för barn och unga med funktionsnedsättningar...</p>
+            <p class="light">Publicerad: 2023-10-11</p></a>
+            <a class="hashtag" href="#">Kultur</a>
+            </h2>
+        </article>
+<!-- "Fler nyheter" - button -->
+    <div class="end"><button id="more-news"><a href="https://www.regionhalland.se/nyheter/">Visa fler nyheter</a>
+    </button></div>
+
 </Section>
 
+<!-- FOOTER -->
+<section class="green-wave">
+    <img id="green-wave" src="images/footer-wave.svg" alt="A green design element">
+</section>
+
+<footer class="section footer">
+
+<!-- Box 1 -->
+ <div class="footer-content">
+    <h3>Kontakta oss</h3>
+    <p>Region Halland</p>
+    <p>Box 517</p>
+    <p>302 80 Halmstad</p>
+    <p><b>Telefon: </b> 035 - 13 48 00</p>
+    <b>Epost:</b>
+    <ul>
+        <li><a href="mailto:regionen@regionhalland.se">regionen@regionhalland.se</a></li>
+        <li><a href="#">Fler kontaktvägar</a></li>
+        <li><a href="#">Anmäl misstanke om jäv</a></li>
+        <li><a href="#">Muto och tjänstefel</a></li>
+    </ul>
+</div>
+
+<!-- Box 2 -->
+<div class="footer-content"><h3>Aktuellt</h3>
+    <ul>
+        <li><a href="#">Nyhetsarktiv</a></li>
+        <li>Pressrum</li>
+        <li>Region Halland i sociala medier</li>
+        <li>Anslagstavlan</li>
+        <li>Möten och handlingar</li>
+    </ul>
+    </div>
+
+<!-- Box 3 -->
+<div class="footer-content"><h3>Om webbplatsen</h3>
+    <ul>
+        <li><a href="mailto:regionen@regionhalland.se"></a>regionen@regionhalland.se</li>
+        <li>Fler kontaktvägar</li>
+        <li>Anmäl misstanke om jäv</li>
+        <li>Muto och tjänstefel</li>
+    </ul>
+    </div>
+
+<!-- Box 4 -->
+<div class="footer-content"><h3>Andra webbplatser</h3>
+    <ul>
+        <li><a href="mailto:regionen@regionhalland.se"></a>regionen@regionhalland.se</li>
+        <li>Fler kontaktvägar</li>
+        <li>Anmäl misstanke om jäv</li>
+        <li>Muto och tjänstefel</li>
+    </ul>
+    </div>
+
+<img id="blob-right" src="images/blob-right.svg">
+
+<img id="blob-left" src="images/blob-left.svg">
+</footer>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>

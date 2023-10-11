@@ -6,8 +6,39 @@ body
 
 font-family: 'Montserrat', sans-serif;
 color: #2D2D2B;
+position: relative;
 
 }
+
+// "To the top" - button
+#to-the-top
+{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: solid 1px #006b88;
+    background-color: #e2e2e27a;
+    opacity: 1;
+    transition: ease-in-out 120ms;
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    z-index: 2;
+
+    &:hover
+    {
+        box-shadow: 0 0 4px 1px #6c8991;
+        background-color: #cdcdcd;
+        transform: scaleY(1.1);
+    }
+}
+
+.hide-btn
+{
+    opacity: 0 !important;
+}
+
+// MOBIL VERSION
 
 @media(min-width: 320px)
 {
@@ -68,19 +99,11 @@ color: #2D2D2B;
         font-size: 0.8rem;
         margin-bottom: 1.5rem;
     }
-
-    .hashtag
-    {
-        text-decoration: none;
-        color: #00495D;
-        border: solid 1px #00495D;
-        padding: 0.5rem;
-        border-radius: 1rem;
-    }
 }
 
 }
 
+// DESKTOP VERSION
 
 // Min-width 1400px
 @media(min-width: 1400px)
@@ -128,6 +151,7 @@ color: #2D2D2B;
     #Lyssna
     {
         text-align: right;
+        cursor: pointer;
 
         i{
             margin-right: 0.5rem;
@@ -144,8 +168,23 @@ color: #2D2D2B;
         {
             margin-right: 2.5rem;
             font-size: 1.1rem;
+            position: relative;
+
+            h5{
+                font-size: 1.1rem;
+                font-weight: 400;
+                margin: 0;
+                position: relative;
+
+                &:hover
+                {
+                    text-decoration: underline solid 2px #489c79;
+                }
+            } 
+            
         }
     }
+    
 
     #logotype-desktop
     {
@@ -206,14 +245,24 @@ color: #2D2D2B;
 
     }
 
-    // Section - "Nyheter"
+    // Section 4 - "Nyheter"
     .news
     {
         padding-inline: 16rem;
         display: block;
     }
 
+    // Footer
+    .footer
+    {
+        padding-inline: 16rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column: 1fr;
+    }
+
 }
+
 
 
 ////////
@@ -305,6 +354,128 @@ color: #2D2D2B;
 
     }
 }
+
+// Section 4 - "Nyheter"
+.news
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+
+    a{
+        text-decoration: none;
+        color: #2D2D2B;
+
+        &:hover
+        {
+            h2{
+                text-decoration: underline solid 2px #2D2D2B;
+            }
+        }
+    }
+}
+
+.hashtag
+{
+    text-decoration: none;
+    color: #00495D;
+    border: solid 1px #00495D;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    transition: color ease-in-out 120ms;
+
+    &:hover
+    {
+        color: #5b8169;
+    }
+}
+
+.end
+{
+    display: flex;
+    justify-content: center;
+
+    #more-news
+{
+
+    background-color: #006858;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.5rem;
+    transition: background-color ease-in-out 120ms;
+
+    a{
+        color: white;
+    }
+
+    &:hover
+    {
+        background-color: #00483c;
+    }
+}
+}
+
+// FOOTER
+.green-wave
+{
+    width: 100vw;
+
+    #green-wave
+    {
+        width: 100%;
+    }
+
+}
+
+.footer
+{
+    position: relative;
+    background-color: #006858;
+    color: white;
+    padding-block: 2rem;
+
+    p{
+        margin: 0.2rem;
+    }
+
+    ul
+    {
+        margin: 0;
+        padding: 0; 
+    }
+
+    li
+    {
+        list-style-type: none;
+        margin-bottom: 1rem;
+
+        &:hover
+        {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    a{
+        color: white;
+        text-decoration: none;
+    }
+
+    #blob-right
+    {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    #blob-left
+    {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
 
 
 

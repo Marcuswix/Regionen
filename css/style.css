@@ -2,6 +2,30 @@
 body {
   font-family: "Montserrat", sans-serif;
   color: #2D2D2B;
+  position: relative;
+}
+
+#to-the-top {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: solid 1px #006b88;
+  background-color: rgba(226, 226, 226, 0.4784313725);
+  opacity: 1;
+  transition: ease-in-out 120ms;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  z-index: 2;
+}
+#to-the-top:hover {
+  box-shadow: 0 0 4px 1px #6c8991;
+  background-color: #cdcdcd;
+  transform: scaleY(1.1);
+}
+
+.hide-btn {
+  opacity: 0 !important;
 }
 
 @media (min-width: 320px) {
@@ -46,13 +70,6 @@ body {
     font-size: 0.8rem;
     margin-bottom: 1.5rem;
   }
-  .news .hashtag {
-    text-decoration: none;
-    color: #00495D;
-    border: solid 1px #00495D;
-    padding: 0.5rem;
-    border-radius: 1rem;
-  }
 }
 @media (min-width: 1400px) {
   .menu {
@@ -81,6 +98,7 @@ body {
   }
   #Lyssna {
     text-align: right;
+    cursor: pointer;
   }
   #Lyssna i {
     margin-right: 0.5rem;
@@ -93,6 +111,17 @@ body {
   #main-menu .main-menu-items {
     margin-right: 2.5rem;
     font-size: 1.1rem;
+    position: relative;
+  }
+  #main-menu .main-menu-items h5 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 0;
+    position: relative;
+  }
+  #main-menu .main-menu-items h5:hover {
+    -webkit-text-decoration: underline solid 2px #489c79;
+            text-decoration: underline solid 2px #489c79;
   }
   #logotype-desktop {
     width: 20vw;
@@ -130,6 +159,12 @@ body {
   .news {
     padding-inline: 16rem;
     display: block;
+  }
+  .footer {
+    padding-inline: 16rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column: 1fr;
   }
 }
 .main .image-container {
@@ -187,4 +222,91 @@ body {
 }
 .boxes .box-container .end-arrow i {
   float: right;
+}
+
+.news {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 3rem;
+}
+.news a {
+  text-decoration: none;
+  color: #2D2D2B;
+}
+.news a:hover h2 {
+  -webkit-text-decoration: underline solid 2px #2D2D2B;
+          text-decoration: underline solid 2px #2D2D2B;
+}
+
+.hashtag {
+  text-decoration: none;
+  color: #00495D;
+  border: solid 1px #00495D;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  transition: color ease-in-out 120ms;
+}
+.hashtag:hover {
+  color: #5b8169;
+}
+
+.end {
+  display: flex;
+  justify-content: center;
+}
+.end #more-news {
+  background-color: #006858;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.5rem;
+  transition: background-color ease-in-out 120ms;
+}
+.end #more-news a {
+  color: white;
+}
+.end #more-news:hover {
+  background-color: #00483c;
+}
+
+.green-wave {
+  width: 100vw;
+}
+.green-wave #green-wave {
+  width: 100%;
+}
+
+.footer {
+  position: relative;
+  background-color: #006858;
+  color: white;
+  padding-block: 2rem;
+}
+.footer p {
+  margin: 0.2rem;
+}
+.footer ul {
+  margin: 0;
+  padding: 0;
+}
+.footer li {
+  list-style-type: none;
+  margin-bottom: 1rem;
+}
+.footer li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+.footer #blob-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.footer #blob-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
