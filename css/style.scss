@@ -10,6 +10,22 @@ position: relative;
 
 }
 
+// Overlay
+#overlay 
+{
+    position: fixed;
+    inset: 0;
+    background-color: #00000042;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms;
+
+    &.show {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
 // "To the top" - button
 #to-the-top
 {
@@ -38,7 +54,7 @@ position: relative;
     opacity: 0 !important;
 }
 
-// MOBIL VERSION
+// MOBIL VERSION ////////////////////////////////////
 
 @media(min-width: 320px)
 {
@@ -71,6 +87,7 @@ position: relative;
     display: none;
 }
 
+
 // Section 3 - "Boxes"
     .boxes
     {
@@ -101,11 +118,33 @@ position: relative;
     }
 }
 
+.footer
+{
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    padding-inline: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    
 }
 
-// DESKTOP VERSION
+#blob-right
+{
+    width: 16vw;
+}
+
+#blob-left
+{
+    width: 16vw
+}
+
+}
+
+// DESKTOP VERSION //////////////////////////////////
 
 // Min-width 1400px
+
 @media(min-width: 1400px)
 
 //Main menu
@@ -114,8 +153,9 @@ position: relative;
     {
         padding-inline: 16rem;
         padding-top: 2rem;
-
+        position: relative;
     }
+
 
     #mobil-menu
     {
@@ -125,6 +165,11 @@ position: relative;
     #desktop-menu
     {
         display: block;
+
+        #search-box
+        {
+            outline: none;
+        }
 
         
         #logotype-and-search
@@ -180,15 +225,64 @@ position: relative;
                 {
                     text-decoration: underline solid 2px #489c79;
                 }
-            } 
-            
+            }
         }
     }
-    
 
     #logotype-desktop
     {
         width: 20vw;
+    }
+
+    .togglemenu-design
+    {
+        padding-inline: 16rem;
+        padding-block: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        position: absolute;
+        z-index: 1;
+        width: 100vw;
+        height: 40rem;
+        left: 0; 
+        background-color: transparent;
+        opacity: 1;
+        transition: opacity 100ms ease-in-out;
+    }
+
+    .hide
+    {        
+        opacity: 0;
+        z-index: -1 !important;
+    }
+
+    .background
+    {
+     opacity: 1;
+     background-color: #F6F5F4;
+     position: absolute;
+     z-index: 1;
+     width: 100vw;
+     height: 40rem;
+     left: 0; 
+    }
+
+    .togglemenu-content
+    {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        
+        a{
+            color: #2D2D2B;
+            text-decoration: none;
+
+            &:hover
+            {
+                text-decoration: underline;
+            }
+        }
+        
     }
 
     // Section 3 - "Boxes"
@@ -225,14 +319,12 @@ position: relative;
         {
             grid-area: 3 / 1 / span 1 / span 3;
             height: 25rem;
-            
         }
 
         #box-5
         {
             grid-area: 3 / 4 / span 1 / span 3;
             height: 25rem;
-
         }
 
         .text-container
@@ -240,9 +332,6 @@ position: relative;
             height: 44rem;
             
         }
-
-
-
     }
 
     // Section 4 - "Nyheter"
@@ -259,6 +348,7 @@ position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-column: 1fr;
+        padding-block: 2rem;
     }
 
 }
@@ -419,10 +509,17 @@ position: relative;
 .green-wave
 {
     width: 100vw;
+    height: 5vw;
+    margin-block: 0;
+    padding-block: 0;
+    position: relative;
+    border: none;
 
     #green-wave
     {
         width: 100%;
+        position: absolute;
+        bottom: 0;
     }
 
 }
@@ -432,10 +529,10 @@ position: relative;
     position: relative;
     background-color: #006858;
     color: white;
-    padding-block: 2rem;
+    border: none
 
     p{
-        margin: 0.2rem;
+        margin-bottom: 1rem;
     }
 
     ul
@@ -473,9 +570,6 @@ position: relative;
         position: absolute;
         bottom: 0;
         left: 0;
-    }
 }
 
-
-
-
+}
