@@ -14,8 +14,6 @@
 </head>
 <body>
 
-<div id="overlay"></div>
-
 <!-- "To the top" - button -->
 <button id="to-the-top" class="hide-btn" onclick="toTheTop()">
     <i class="fa-solid fa-arrow-up"></i>
@@ -33,200 +31,278 @@
 
 <!-- Desktop menu -->
 <div id="desktop-menu">
-        <div id="Lyssna"><i class="fa-solid fa-volume-high"></i>Lyssna
-        </div>
+        <div id="Lyssna"><i class="fa-solid fa-volume-high"></i>Lyssna</div>
         <div id="logotype-and-search"><img id="logotype-desktop" src="images/RegionHalland_Logotyp.svg" alt="Region Halland logotype">
             <form id="search" action="#">
                 <div class="search-box"><input id="search-box" type="search" placeholder="Vad söker du idag?"><i class="fa-solid fa-magnifying-glass"></i></div>
             </form>
         </div> 
-
-    <hr>
-    <div id="main-menu">
-       <div id="development" onclick="menuFunction()" class="main-menu-items"><h5>Utveckling oich tillväxt</h5></div>
-       <div id="health" class="main-menu-items"><h5>Hälsa och vård</h5></div>
-       <div id="culture" class="main-menu-items"><h5>Kultur</h5></div>
-       <div id="work" class="main-menu-items"><h5>Jobb och karriär</h5></div> 
-       <div id="school" class="main-menu-items"><h5>Våra skolor</h5></div>
-       <div id="democracy" class="main-menu-items"><h5>Demokrati och politik</h5></div>
-       <div id="About" class="main-menu-items"><h5>Om Region Halland</5h></div>
-    </div>
-    <hr>
 </div>
 
+<hr>
+
+<!-- Menu chooises -->
+<nav id="main-menu">
+
+       <div id="development" data-target="togglemenu-development" class="main-menu-items"><h5>Utveckling och tillväxt</h5></div>
+       <div id="health" data-target="togglemenu-health" class="main-menu-items"><h5>Hälsa och vård</h5></div>
+       <div id="culture" data-target="togglemenu-culture" class="main-menu-items"><h5>Kultur</h5></div>
+       <div id="work" data-target="togglemenu-work" class="main-menu-items"><h5>Jobb och karriär</h5></div> 
+       <div id="school" data-target="togglemenu-school" class="main-menu-items"><h5>Våra skolor</h5></div>
+       <div id="democracy" data-target="togglemenu-democracy" class="main-menu-items"><h5>Demokrati och politik</h5></div>
+       <div id="about" data-target="togglemenu-about" class="main-menu-items"><h5>Om Region Halland</5h></div>
 
 <!-- When hover menu -->
 
 <!-- "Utveckling och tillväxt" -->
-<div id="menu-background" class="background hide">
-
-<div id="togglemenu-development" class="togglemenu-design hide">
-    <div class="togglemenu-content">
-    <a href="#"><h5>Samhällsplanering och trafik</h5></a>
-    <a href="#">Cykel</a>
-    <a href="#">Kollektivtrafik</a>
-    <a href="#">Vägar och järnvägar</a>
-    <a href="#">Regional planering</a>
-    <a href="#">Bredbandsutveckling</a>
+    <div id="togglemenu-development" class="togglemenu-design hide">
+        <div class="togglemenu-content">
+        <a href="#"><h5>Samhällsplanering och trafik</h5></a>
+        <a href="#">Cykel</a>
+        <a href="#">Kollektivtrafik</a>
+        <a href="#">Vägar och järnvägar</a>
+        <a href="#">Regional planering</a>
+        <a href="#">Bredbandsutveckling</a>
+        </div>
+    
+        <div class="togglemenu-content">
+        <a href="#"><h5>Utbildning och kompetens</h5></a>
+        <a href="#">Cykel</a>
+        <a href="#">Kollektivtrafik</a>
+        <a href="#">Vägar och järnvägar</a>
+        <a href="#">Regional planering</a>
+        <a href="#">Bredbandsutveckling</a>
+        </div>
+    
+        <div class="togglemenu-content">
+        <a href="#"><h5>Hälsa för alla</h5></a>
+        <a href="#">Cykel</a>
+        <a href="#">Kollektivtrafik</a>
+        <a href="#">Vägar och järnvägar</a>
+        <a href="#">Regional planering</a>
+        <a href="#">Bredbandsutveckling</a>
+        </div>
+    
+        <div class="togglemenu-content">
+        <a href="#"><h5>Stöd och finansiering</h5></a>
+        <a href="#">Cykel</a>
+        <a href="#">Kollektivtrafik</a>
+        <a href="#">Vägar och järnvägar</a>
+        <a href="#">Regional planering</a>
+        <a href="#">Bredbandsutveckling</a>
+        </div>
+    
+        <div class="togglemenu-content">
+        <a href="#"><h5>Vårt utveckllingsupdrag</h5></a>
+        <a href="#">Cykel</a>
+        <a href="#">Kollektivtrafik</a>
+        <a href="#">Vägar och järnvägar</a>
+        <a href="#">Regional planering</a>
+        <a href="#">Bredbandsutveckling</a>
+        </div>
+    
+        <div class="togglemenu-content">
+        <a href="#"><h5>Halland över gränserna</h5></a>
+        <a href="#">Cykel</a>
+        <a href="#">Kollektivtrafik</a>
+        <a href="#">Vägar och järnvägar</a>
+        <a href="#">Regional planering</a>
+        <a href="#">Bredbandsutveckling</a>
+        </div>
     </div>
-
-
-    <div class="togglemenu-content">
-    <a href="#"><h5>Utbildning och kompetens</h5></a>
-    <a href="#">Cykel</a>
-    <a href="#">Kollektivtrafik</a>
-    <a href="#">Vägar och järnvägar</a>
-    <a href="#">Regional planering</a>
-    <a href="#">Bredbandsutveckling</a>
-    </div>
-
-    <div class="togglemenu-content">
-    <a href="#"><h5>Hälsa för alla</h5></a>
-    <a href="#">Cykel</a>
-    <a href="#">Kollektivtrafik</a>
-    <a href="#">Vägar och järnvägar</a>
-    <a href="#">Regional planering</a>
-    <a href="#">Bredbandsutveckling</a>
-    </div>
-
-    <div class="togglemenu-content">
-    <a href="#"><h5>Stöd och finansiering</h5></a>
-    <a href="#">Cykel</a>
-    <a href="#">Kollektivtrafik</a>
-    <a href="#">Vägar och järnvägar</a>
-    <a href="#">Regional planering</a>
-    <a href="#">Bredbandsutveckling</a>
-    </div>
-
-    <div class="togglemenu-content">
-    <a href="#"><h5>Vårt utveckllingsupdrag</h5></a>
-    <a href="#">Cykel</a>
-    <a href="#">Kollektivtrafik</a>
-    <a href="#">Vägar och järnvägar</a>
-    <a href="#">Regional planering</a>
-    <a href="#">Bredbandsutveckling</a>
-    </div>
-
-    <div class="togglemenu-content">
-    <a href="#"><h5>Halland över gränserna</h5></a>
-    <a href="#">Cykel</a>
-    <a href="#">Kollektivtrafik</a>
-    <a href="#">Vägar och järnvägar</a>
-    <a href="#">Regional planering</a>
-    <a href="#">Bredbandsutveckling</a>
-    </div>
-</div>
-
+    
 <!-- "Hälsa och vård" -->
-<div id="togglemenu-health" class="togglemenu-design hide">
-    <div class="togglemenu-content">
-    <a href="#"><h5>Hälsa och vård</h5></a>
-    <a href="#">Cykel</a>
-    <a href="#">Kollektivtrafik</a>
-    <a href="#">Vägar och järnvägar</a>
-    <a href="#">Regional planering</a>
-    <a href="#">Bredbandsutveckling</a>
+    <div id="togglemenu-health" class="togglemenu-design hide">
+        <div class="togglemenu-content">
+        <a href="#"><h5>Hälsa och vård</h5></a>
+        <a href="#">Cykel</a>
+        <a href="#">Kollektivtrafik</a>
+        <a href="#">Vägar och järnvägar</a>
+        <a href="#">Regional planering</a>
+        <a href="#">Bredbandsutveckling</a>
+        </div>
+    
+        <div class="togglemenu-content">
+        <a href="#"><h5>Så fungerar vården i Halland</h5></a>
+        <a href="#">Cykel</a>
+        <a href="#">Kollektivtrafik</a>
+        <a href="#">Vägar och järnvägar</a>
+        <a href="#">Regional planering</a>
+        <a href="#">Bredbandsutveckling</a>
+        </div>
+    
+        <div class="togglemenu-content">
+        <a href="#"><h5>Psykiatrin</h5></a>
+        <a href="#">Cykel</a>
+        <a href="#">Kollektivtrafik</a>
+        <a href="#">Vägar och järnvägar</a>
+        <a href="#">Regional planering</a>
+        <a href="#">Bredbandsutveckling</a>
+        </div>
+    
+        <div class="togglemenu-content">
+        <a href="#"><h5>Kvalité och utveckling</h5></a>
+        <a href="#">Cykel</a>
+        <a href="#">Kollektivtrafik</a>
+        <a href="#">Vägar och järnvägar</a>
+        <a href="#">Regional planering</a>
+        <a href="#">Bredbandsutveckling</a>
+        </div>
+    
+        <div class="togglemenu-content">
+        <a href="#"><h5>Din vård</h5></a>
+        <a href="#">Cykel</a>
+        <a href="#">Kollektivtrafik</a>
+        <a href="#">Vägar och järnvägar</a>
+        <a href="#">Regional planering</a>
+        <a href="#">Bredbandsutveckling</a>
+        </div>
+    
+        <div class="togglemenu-content">
+        <a href="#"><h5>Hjälp</h5></a>
+        <a href="#">Cykel</a>
+        <a href="#">Kollektivtrafik</a>
+        <a href="#">Vägar och järnvägar</a>
+        <a href="#">Regional planering</a>
+        <a href="#">Bredbandsutveckling</a>
+        </div>
     </div>
-
-
-    <div class="togglemenu-content">
-    <a href="#"><h5>Så fungerar vården i Halland</h5></a>
-    <a href="#">Cykel</a>
-    <a href="#">Kollektivtrafik</a>
-    <a href="#">Vägar och järnvägar</a>
-    <a href="#">Regional planering</a>
-    <a href="#">Bredbandsutveckling</a>
-    </div>
-
-    <div class="togglemenu-content">
-    <a href="#"><h5>Psykiatrin</h5></a>
-    <a href="#">Cykel</a>
-    <a href="#">Kollektivtrafik</a>
-    <a href="#">Vägar och järnvägar</a>
-    <a href="#">Regional planering</a>
-    <a href="#">Bredbandsutveckling</a>
-    </div>
-
-    <div class="togglemenu-content">
-    <a href="#"><h5>Kvalité och utveckling</h5></a>
-    <a href="#">Cykel</a>
-    <a href="#">Kollektivtrafik</a>
-    <a href="#">Vägar och järnvägar</a>
-    <a href="#">Regional planering</a>
-    <a href="#">Bredbandsutveckling</a>
-    </div>
-
-    <div class="togglemenu-content">
-    <a href="#"><h5>Din vård</h5></a>
-    <a href="#">Cykel</a>
-    <a href="#">Kollektivtrafik</a>
-    <a href="#">Vägar och järnvägar</a>
-    <a href="#">Regional planering</a>
-    <a href="#">Bredbandsutveckling</a>
-    </div>
-
-    <div class="togglemenu-content">
-    <a href="#"><h5>Hjälp</h5></a>
-    <a href="#">Cykel</a>
-    <a href="#">Kollektivtrafik</a>
-    <a href="#">Vägar och järnvägar</a>
-    <a href="#">Regional planering</a>
-    <a href="#">Bredbandsutveckling</a>
-    </div>
-</div>
-
-
+    
+    
 <!-- "Kultur" -->
-<div id="togglemenu-culture" class="togglemenu-design hide">
-    <div class="togglemenu-content">
-    <a href="#"><h5>Kulturområden</h5></a>
-    <a href="#">Cykel</a>
-    <a href="#">Kollektivtrafik</a>
-    <a href="#">Vägar och järnvägar</a>
-    <a href="#">Regional planering</a>
-    <a href="#">Bredbandsutveckling</a>
+    <div id="togglemenu-culture" class="togglemenu-design hide">
+        <div class="togglemenu-content">
+        <a href="#"><h5>Kulturområden</h5></a>
+        <a href="#">Cykel</a>
+        <a href="#">Kollektivtrafik</a>
+        <a href="#">Vägar och järnvägar</a>
+        <a href="#">Regional planering</a>
+        <a href="#">Bredbandsutveckling</a>
+        </div>
+    
+        <div class="togglemenu-content">
+        <a href="#"><h5>Regionalt ulturstöd</h5></a>
+        <a href="#">Cykel</a>
+        <a href="#">Kollektivtrafik</a>
+        <a href="#">Vägar och järnvägar</a>
+        <a href="#">Regional planering</a>
+        <a href="#">Bredbandsutveckling</a>
+        </div>
+    
+        <div class="togglemenu-content">
+        <a href="#"><h5>Kultur för barn-och ungdomar</h5></a>
+        <a href="#">Cykel</a>
+        <a href="#">Kollektivtrafik</a>
+        <a href="#">Vägar och järnvägar</a>
+        <a href="#">Regional planering</a>
+        <a href="#">Bredbandsutveckling</a>
+        </div>
+    
+        <div class="togglemenu-content">
+        <a href="#"><h5>Kulrurutbudet</h5></a>
+        <a href="#">Cykel</a>
+        <a href="#">Kollektivtrafik</a>
+        <a href="#">Vägar och järnvägar</a>
+        <a href="#">Regional planering</a>
+        <a href="#">Bredbandsutveckling</a>
+        </div>
+    
+        <div class="togglemenu-content">
+        <a href="#"><h5>Kulturevenemang</h5></a>
+        <a href="#">Cykel</a>
+        <a href="#">Kollektivtrafik</a>
+        <a href="#">Vägar och järnvägar</a>
+        <a href="#">Regional planering</a>
+        <a href="#">Bredbandsutveckling</a>
+        </div>
     </div>
 
 
+<!-- "Jobb" -->
+    <div id="togglemenu-work" class="togglemenu-design hide">
+        <div class="togglemenu-content">
+        <a href="#"><h5>Jobb och karriär</h5></a>
+        <a href="#">Cykel</a>
+        <a href="#">Kollektivtrafik</a>
+        <a href="#">Vägar och järnvägar</a>
+        <a href="#">Regional planering</a>
+        <a href="#">Bredbandsutveckling</a>
+        </div>
+    
+        <div class="togglemenu-content">
+        <a href="#"><h5>Jobba hos oss</h5></a>
+        <a href="#">Cykel</a>
+        <a href="#">Kollektivtrafik</a>
+        <a href="#">Vägar och järnvägar</a>
+        <a href="#">Regional planering</a>
+        <a href="#">Bredbandsutveckling</a>
+        </div>
+    
+        <div class="togglemenu-content">
+        <a href="#"><h5>Anmäl arbetsskada</h5></a>
+        <a href="#">Cykel</a>
+        <a href="#">Kollektivtrafik</a>
+        <a href="#">Vägar och järnvägar</a>
+        <a href="#">Regional planering</a>
+        <a href="#">Bredbandsutveckling</a>
+        </div>
+    
+        <div class="togglemenu-content">
+        <a href="#"><h5>En rubrik i jobb</h5></a>
+        <a href="#">Cykel</a>
+        <a href="#">Kollektivtrafik</a>
+        <a href="#">Vägar och järnvägar</a>
+        <a href="#">Regional planering</a>
+        <a href="#">Bredbandsutveckling</a>
+        </div>
+    
+        <div class="togglemenu-content">
+        <a href="#"><h5>Jobba, jobba, jobba</h5></a>
+        <a href="#">Cykel</a>
+        <a href="#">Kollektivtrafik</a>
+        <a href="#">Vägar och järnvägar</a>
+        <a href="#">Regional planering</a>
+        <a href="#">Bredbandsutveckling</a>
+        </div>
+    </div>
+
+<!-- "Skola" -->
+<div id="togglemenu-school" class="togglemenu-design hide">
     <div class="togglemenu-content">
-    <a href="#"><h5>Regionalt ulturstöd</h5></a>
-    <a href="#">Cykel</a>
-    <a href="#">Kollektivtrafik</a>
-    <a href="#">Vägar och järnvägar</a>
-    <a href="#">Regional planering</a>
-    <a href="#">Bredbandsutveckling</a>
+    <a href="#"><h5>Våra skolor</h5></a>
     </div>
 
     <div class="togglemenu-content">
-    <a href="#"><h5>Kultur för barn-och ungdomar</h5></a>
-    <a href="#">Cykel</a>
-    <a href="#">Kollektivtrafik</a>
-    <a href="#">Vägar och järnvägar</a>
-    <a href="#">Regional planering</a>
-    <a href="#">Bredbandsutveckling</a>
+    <a href="#"><h5>Gymnasie</h5></a>
     </div>
-
-    <div class="togglemenu-content">
-    <a href="#"><h5>Kulrurutbudet</h5></a>
-    <a href="#">Cykel</a>
-    <a href="#">Kollektivtrafik</a>
-    <a href="#">Vägar och järnvägar</a>
-    <a href="#">Regional planering</a>
-    <a href="#">Bredbandsutveckling</a>
-    </div>
-
-    <div class="togglemenu-content">
-    <a href="#"><h5>Kulturevenemang</h5></a>
-    <a href="#">Cykel</a>
-    <a href="#">Kollektivtrafik</a>
-    <a href="#">Vägar och järnvägar</a>
-    <a href="#">Regional planering</a>
-    <a href="#">Bredbandsutveckling</a>
-    </div>
-
 </div>
 
+<!-- "Demokrati" -->
+<div id="togglemenu-democracy" class="togglemenu-design hide">
+    <div class="togglemenu-content">
+    <a href="#"><h5>Demokrati är bra</h5></a>
+    </div>
+
+    <div class="togglemenu-content">
+    <a href="#"><h5>Vår Organisation</h5></a>
+    </div>
 </div>
+
+<!-- "Om Region Halland" -->
+<div id="togglemenu-about" class="togglemenu-design hide">
+    <div class="togglemenu-content">
+    <a href="#"><h5>Om oss</h5></a>
+    </div>
+
+    <div class="togglemenu-content">
+    <a href="#"><h5>Kontakt</h5></a>
+    </div>
+</div>
+
+
+</nav>
+    <hr>
+
 
 </section>  
 
@@ -237,6 +313,7 @@
     <img id="main-image" src="images/walking-woods-wide.jpg" alt="Two persons walking in the woods">
     <img id="green-wave" src="images/greenwave1.svg" alt="A green wave">
     </div>
+    <div class="filler"></div>
 </Section>
 
 <!-- Section - "Boxes" -->

@@ -5,25 +5,16 @@ body {
   position: relative;
 }
 
-#overlay {
-  position: fixed;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.2588235294);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 300ms;
-}
-#overlay.show {
-  opacity: 1;
-  pointer-events: all;
+hr {
+  margin: 0;
 }
 
 #to-the-top {
-  width: 2rem;
-  height: 2rem;
+  width: 2.4rem;
+  height: 2.4rem;
   border-radius: 50%;
-  border: solid 1px #006b88;
-  background-color: rgba(226, 226, 226, 0.4784313725);
+  border: none;
+  background-color: rgba(177, 177, 177, 0.4784313725);
   opacity: 1;
   transition: ease-in-out 120ms;
   position: fixed;
@@ -109,6 +100,7 @@ body {
   }
   #desktop-menu {
     display: block;
+    margin-bottom: 1rem;
   }
   #desktop-menu #search-box {
     outline: none;
@@ -117,7 +109,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-block: 0.5rem;
+    padding-block: 1rem;
   }
   #desktop-menu #search {
     border: solid 2px rgb(207, 207, 207);
@@ -135,9 +127,10 @@ body {
     margin-right: 0.5rem;
   }
   #main-menu {
-    padding-block: 0.5rem;
+    padding-block: 1rem;
     display: flex;
     justify-content: left;
+    background-color: white;
   }
   #main-menu .main-menu-items {
     margin-right: 2.5rem;
@@ -162,27 +155,16 @@ body {
     padding-block: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    position: absolute;
-    z-index: 1;
-    width: 100vw;
-    height: 40rem;
     left: 0;
-    background-color: transparent;
-    opacity: 1;
-    transition: opacity 100ms ease-in-out;
-  }
-  .hide {
-    opacity: 0;
-    z-index: -1 !important;
-  }
-  .background {
-    opacity: 1;
+    z-index: 1;
     background-color: #F6F5F4;
     position: absolute;
-    z-index: 1;
+    top: 100%;
     width: 100vw;
-    height: 40rem;
-    left: 0;
+    height: 70vh;
+  }
+  .hide {
+    display: none;
   }
   .togglemenu-content {
     display: flex;
@@ -238,6 +220,9 @@ body {
     padding-block: 2rem;
   }
 }
+.main {
+  margin-top: 3rem;
+}
 .main .image-container {
   position: relative;
   width: 100vw;
@@ -251,11 +236,16 @@ body {
   position: relative;
 }
 .main .image-container #green-wave {
-  z-index: 1;
+  z-index: 0;
   bottom: 0;
   right: 0;
   position: absolute;
   width: 100vw;
+}
+.main .filler {
+  width: 100%;
+  height: 6rem;
+  background-color: #F0FAF0;
 }
 
 .boxes {
@@ -281,6 +271,12 @@ body {
 .boxes .box-container a {
   text-decoration: none;
   color: #2D2D2B;
+}
+.boxes .box-container a:hover {
+  color: #747474;
+}
+.boxes .box-container a:hover h4 {
+  text-decoration: underline;
 }
 .boxes .box-container h4 {
   font-size: 1.1rem;

@@ -10,30 +10,19 @@ position: relative;
 
 }
 
-// Overlay
-#overlay 
-{
-    position: fixed;
-    inset: 0;
-    background-color: #00000042;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 300ms;
+hr{
+    margin: 0;
 
-    &.show {
-        opacity: 1;
-        pointer-events: all;
-    }
 }
 
 // "To the top" - button
 #to-the-top
 {
-    width: 2rem;
-    height: 2rem;
+    width: 2.4rem;
+    height: 2.4rem;
     border-radius: 50%;
-    border: solid 1px #006b88;
-    background-color: #e2e2e27a;
+    border: none;
+    background-color: #b1b1b17a;
     opacity: 1;
     transition: ease-in-out 120ms;
     position: fixed;
@@ -165,6 +154,7 @@ position: relative;
     #desktop-menu
     {
         display: block;
+        margin-bottom: 1rem;
 
         #search-box
         {
@@ -177,7 +167,7 @@ position: relative;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-block: 0.5rem;
+            padding-block: 1rem;
         }
 
         #search
@@ -205,9 +195,10 @@ position: relative;
 
     #main-menu
     {
-        padding-block: 0.5rem;
+        padding-block: 1rem;
         display: flex;
         justify-content: left;
+        background-color: white;
 
         .main-menu-items
         {
@@ -240,31 +231,18 @@ position: relative;
         padding-block: 2rem;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        position: absolute;
-        z-index: 1;
-        width: 100vw;
-        height: 40rem;
         left: 0; 
-        background-color: transparent;
-        opacity: 1;
-        transition: opacity 100ms ease-in-out;
+        z-index: 1;
+        background-color: #F6F5F4;
+        position: absolute;
+        top: 100%;
+        width: 100vw;
+        height: 70vh;
     }
 
     .hide
     {        
-        opacity: 0;
-        z-index: -1 !important;
-    }
-
-    .background
-    {
-     opacity: 1;
-     background-color: #F6F5F4;
-     position: absolute;
-     z-index: 1;
-     width: 100vw;
-     height: 40rem;
-     left: 0; 
+        display: none;
     }
 
     .togglemenu-content
@@ -282,7 +260,6 @@ position: relative;
                 text-decoration: underline;
             }
         }
-        
     }
 
     // Section 3 - "Boxes"
@@ -298,7 +275,6 @@ position: relative;
             height: 40rem;
             overflow: hidden;
         }
-
 
         #box-1
         {
@@ -360,6 +336,7 @@ position: relative;
 // Main Image
 .main
 {
+    margin-top: 3rem;
     .image-container
 {
 
@@ -379,13 +356,22 @@ position: relative;
 
     #green-wave
     {
-    z-index: 1;
+    z-index: 0;
     bottom: 0;
     right: 0;
     position: absolute;
     width: 100vw;
     }
 }
+
+.filler
+{
+    width: 100%;
+    height: 6rem;
+    background-color: #F0FAF0;
+
+}
+
 }
 
 // Section - "Boxes"
@@ -424,6 +410,14 @@ position: relative;
         {
             text-decoration: none;
             color: #2D2D2B;
+
+            &:hover
+            {
+                h4{
+                    text-decoration: underline;
+                }
+                color: #747474;
+            }
         }
 
         h4{

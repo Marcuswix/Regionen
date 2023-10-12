@@ -27,77 +27,48 @@ window.addEventListener("scroll", function()
 })
 
 // Menu function
-let menuDevelopment = document.getElementById("togglemenu-development")
-let menuHealth = document.getElementById("togglemenu-health")
-let menuBackground = document.getElementById("menu-background")
-let menuCulture = document.getElementById("togglemenu-culture")
+// const menuDevelopment = document.getElementById("togglemenu-development")
+// const menuHealth = document.getElementById("togglemenu-health")
+// const menuCulture = document.getElementById("togglemenu-culture")
+// const menuWork = document.getElementById("togglemenu-work")
+// const menuSchool = document.getElementById("togglemenu-school")
+// const menuDemocracy = document.getElementById("togglemenu-democracy")
+// const menuAbout = document.getElementById("togglemenu-about")
 
-let triggerOne = document.getElementById("development")
-let triggerTwo = document.getElementById("health")
-let triggerThree = document.getElementById("culture")
+// // Triggers
+// const showDevelopment = document.getElementById("development")
+// const showHealth = document.getElementById("health")
 
-triggerOne.addEventListener("mouseenter", function()
-{
-    menuDevelopment.classList.remove("hide")
-    menuBackground.classList.remove("hide")
-    menuHealth.classList.add("hide")
-    menuCulture.classList.add("hide")
+
+
+// showHealth.addEventListener("mouseenter", function()
+// {
+//      showActiveColumn(menuHealth)
+// })
+
+function hideAllColumns(items) {
+    items.forEach(item => {
+        document.getElementById(item.dataset.target).classList.add('hide')
+    })
+}
+function showActiveColumn(target) {
+    document.getElementById(target).classList.remove("hide")
+
+}
+
+const menuItems = document.querySelectorAll('.main-menu-items');
+
+menuItems.forEach(item => {
+    item.addEventListener('mouseenter', function(event) {
+        console.log(event)
+        hideAllColumns(menuItems)
+        showActiveColumn(item.dataset.target)
+    })
 })
 
-triggerTwo.addEventListener("mouseenter", function()
-{
-    menuHealth.classList.remove("hide")
-    menuBackground.classList.remove("hide")
-    menuDevelopment.classList.add("hide")
-    menuCulture.classList.add("hide")
+document.querySelector('#main-menu').addEventListener('mouseleave', e => {
+    hideAllColumns(menuItems)
 })
 
-triggerThree.addEventListener("mouseenter", function()
-{
-    menuCulture.classList.remove("hide")
-    menuBackground.classList.remove("hide")
-    menuDevelopment.classList.add("hide")
-    menuHealth.classList.add("hide")
-})
-
-addEventListener("")
 
 
-// let triggerTwo = document.getElementById("health")
-// let triggerThree = document.getElementById("culture")
-// let triggerFour = document.getElementById("work")
-// let triggerFive = document.getElementById("school")
-
-// let overlay = document.getElementById("overlay");
-
-// triggerOne.addEventListener("mouseenter", function ()
-// {
-//     menuDevelopment.style.display = "grid";
-//     menuHealth.style.display = "none"
-    
-// });
-
-// triggerTwo.addEventListener("mouseenter", function ()
-// {
-//     menuHealth.style.display = "grid";
-//     menuDevelopment.style.display = "none"
-    
-// });
-
-
-
-
-// function menuFunction()
-// {
-//     menu.classList.remove("hide")
-//     overlay.classList.add('show')
-// }
-
-// menu.addEventListener("click", function() 
-//     {
-//     menu.classList.add("hide")
-//     overlay.classList.remove('show')
-//     });
-
-
-     
