@@ -24,24 +24,47 @@
 
 <!-- Mobil menu -->
     <div id="mobil-menu">
+    <div id="top-menu-mobil">
         <img id="logotype" src="images/RegionHalland_Logotyp.svg" alt="Region Halland logotype">
-        <div><i class="fa-solid fa-magnifying-glass"></i></div>
-        <div><i class="fa-solid fa-bars"></i></div>
+        <button id="btn-search" onclick="showSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button id="btn-bars" class="" onclick="showMenu()"><i class="fa-solid fa-bars"></i></button>
+        <button id="xmark" class="hide"  onclick="hideMenu()" ><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <!-- Mobil search function -->
+    <form id="search-mobil" class="search hide" action="#">
+        <input class="search-box" type="search" placeholder="Vad söker du idag?"></input>
+    </form>
+
+    <!-- Mobil menu choices -->
+    <nav id="mobil-menu-list" class="hide">
+    <ul>
+     <li><a href="#">Utveckling och tillväxt</a><button class="mobil-menu-btn"><i class="fa-solid fa-plus"></i></button></li>
+     <li><a href="#">Jobb och karriär</a><button class="mobil-menu-btn"><i class="fa-solid fa-plus"></i></button></li>
+     <li><a href="#">Demokrati och politik</a><button class="mobil-menu-btn"><i class="fa-solid fa-plus"></i></button></li>
+     <li><a href="#">Hälsa och vård</a><button class="mobil-menu-btn"><i class="fa-solid fa-plus"></i></button></li>
+     <li><a href="#">Om Region Halland</a><button class="mobil-menu-btn"><i class="fa-solid fa-plus"></i></button></li>
+     <li><a href="#">Kultur</a><button class="mobil-menu-btn"><i class="fa-solid fa-plus"></i></button></li>
+     <li><a href="#">Våra skolor</a><button class="mobil-menu-btn"><i class="fa-solid fa-plus"></i></button></li>
+     <li><a href="index.html">Förstasidan</a><button class="mobil-menu-btn"><i class="fa-solid fa-plus"></i></button></li>
+    </ul> 
+    </nav>
+
     </div>
 
 <!-- Desktop menu -->
 <div id="desktop-menu">
-        <div id="Lyssna"><i class="fa-solid fa-volume-high"></i>Lyssna</div>
-        <div id="logotype-and-search"><img id="logotype-desktop" src="images/RegionHalland_Logotyp.svg" alt="Region Halland logotype">
-            <form id="search" action="#">
-                <div class="search-box"><input id="search-box" type="search" placeholder="Vad söker du idag?"><i class="fa-solid fa-magnifying-glass"></i></div>
-            </form>
-        </div> 
+    <div id="Lyssna"><i class="fa-solid fa-volume-high"></i>Lyssna</div>
+    <div id="logotype-and-search"><img id="logotype-desktop" src="images/RegionHalland_Logotyp.svg" alt="Region Halland logotype">
+        <form class="search" action="#">
+            <div class="search-box"><input class="search-box" type="search" placeholder="Vad söker du idag?"><i class="fa-solid fa-magnifying-glass"></i></div>
+        </form>
+    </div> 
 </div>
 
 <hr>
 
-<!-- Menu chooises -->
+<!-- Menu choices -->
 <nav id="main-menu">
 
        <div id="development" data-target="togglemenu-development" class="main-menu-items"><h5>Utveckling och tillväxt</h5></div>
@@ -301,13 +324,11 @@
 
 
 </nav>
-    <hr>
-
-
+<hr>
 </section>  
 
 
-<!-- Section - "Main image" -->
+<!-- Section 2 - "Main image" -->
 <Section class="section main">
     <div class="image-container">
     <img id="main-image" src="images/walking-woods-wide.jpg" alt="Two persons walking in the woods">
@@ -316,7 +337,7 @@
     <div class="filler"></div>
 </Section>
 
-<!-- Section - "Boxes" -->
+<!-- Section 3 - "Boxes" -->
 <Section class="section boxes">
 
 <!-- Box 1 -->
@@ -325,8 +346,8 @@
         <div class="text-container">
             <h4>Arbetet med sjukvårdsstrukturen i Halland</h4>
             <p>Vi tar nu första steget för att skapa förutsättningar för en god hälso- och sjukvård i Halland under många år framöver. Vi har inte facit, det är ett komplext uppdrag som behöver ses i ljuset av en omvärld i snabb förändring.” Så beskriver Mikaela Waltersson, ordförande i Regionstyrelsen, det arbete som pågår och där Regionfullmäktige enats om att ta ett övergripande inriktningsbeslut för sjukhusstrukturen i Halland. Hög inflyttning och utvecklingskraft ger goda förutsättningar för välfärden.</p>
-            <div class="end-arrow"><i class="fa-solid fa-arrow-right"></i></div>
         </div>
+        <div class="end-arrow"><i class="fa-solid fa-arrow-right"></i></div>
         </a> 
     </div>
 
@@ -338,7 +359,8 @@
         <p>Vi tar nu första steget för att skapa förutsättningar för en god hälso- och sjukvård i Halland under många år framöver.</p>
         <div class="end-arrow"><i class="fa-solid fa-arrow-right"></i></div>
     </div>
-    </a> 
+    </a>
+    <div class="end-arrow"><i class="fa-solid fa-arrow-right"></i></div> 
 </div>
 
 <!-- Box 3 -->

@@ -1,4 +1,4 @@
-// To the top function
+// "To the top" function
 function toTheTop()
 {
     window.scrollTo(
@@ -9,7 +9,7 @@ function toTheTop()
     )
 }
 
-// Hide "To the top" -button
+// Hide "To the top" - button
 
 window.addEventListener("scroll", function()
 {
@@ -26,26 +26,7 @@ window.addEventListener("scroll", function()
     }
 })
 
-// Menu function
-// const menuDevelopment = document.getElementById("togglemenu-development")
-// const menuHealth = document.getElementById("togglemenu-health")
-// const menuCulture = document.getElementById("togglemenu-culture")
-// const menuWork = document.getElementById("togglemenu-work")
-// const menuSchool = document.getElementById("togglemenu-school")
-// const menuDemocracy = document.getElementById("togglemenu-democracy")
-// const menuAbout = document.getElementById("togglemenu-about")
-
-// // Triggers
-// const showDevelopment = document.getElementById("development")
-// const showHealth = document.getElementById("health")
-
-
-
-// showHealth.addEventListener("mouseenter", function()
-// {
-//      showActiveColumn(menuHealth)
-// })
-
+// Desktop Menu function
 function hideAllColumns(items) {
     items.forEach(item => {
         document.getElementById(item.dataset.target).classList.add('hide')
@@ -69,6 +50,45 @@ menuItems.forEach(item => {
 document.querySelector('#main-menu').addEventListener('mouseleave', e => {
     hideAllColumns(menuItems)
 })
+
+// Mobil menu function
+const toggleButton = document.getElementById("btn-bars")
+const mobilMenu = document.getElementById("mobil-menu-list")
+const exitMobilMenu = document.getElementById("xmark")
+const searchMobil = document.getElementById("search-mobil")
+
+function showMenu()
+{
+    if (mobilMenu.classList.contains("hide"))
+    {
+        toggleButton.classList.add("hide")
+        mobilMenu.classList.remove("hide")
+        exitMobilMenu.classList.remove("hide")
+    }
+}
+
+function hideMenu()
+{
+    if (toggleButton.classList.contains("hide"))
+    {
+        mobilMenu.classList.add("hide")
+        exitMobilMenu.classList.add("hide")
+        toggleButton.classList.remove("hide")
+    }
+}
+
+function showSearch ()
+{
+    if (searchMobil.classList.contains("hide"))
+    {
+        searchMobil.classList.remove("hide")
+    }
+
+    else
+    {
+        searchMobil.classList.add("hide")
+    }
+}
 
 
 

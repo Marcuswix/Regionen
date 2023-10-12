@@ -33,24 +33,102 @@ hr {
 }
 
 @media (min-width: 320px) {
-  #mobil-menu {
+  #to-the-top {
+    display: none;
+  }
+  hr {
+    display: none;
+  }
+  #btn-search {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    border: none;
+    background-color: transparent;
+  }
+  #mobil-menu ul {
+    margin-inline: 1rem;
+    padding: 0;
+  }
+  #mobil-menu li {
+    list-style-type: none;
+    padding: 6px 16px;
+    background-color: #f2f2f2;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  #mobil-menu li:active {
+    background-color: rgba(242, 242, 242, 0.5921568627);
+  }
+  #mobil-menu a {
+    color: #2D2D2B;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  #mobil-menu a:hover {
+    text-decoration: underline;
+  }
+  #mobil-menu .mobil-menu-btn {
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 48px;
+    height: 48px;
+    background-color: #d7d7d7;
+  }
+  #mobil-menu #btn-bars {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+  }
+  #mobil-menu #xmark {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+  }
+  .hide {
+    display: none !important;
+  }
+  .show-top-menu-mobil {
+    display: block;
+    z-index: 1;
+  }
+  #top-menu-mobil {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
     width: 100vw;
-    padding: 1.5rem;
+    padding: 2rem;
     -moz-column-gap: 1rem;
          column-gap: 1rem;
   }
-  #mobil-menu i {
+  #top-menu-mobil i {
     color: #2D2D2B;
     font-size: 1.4rem;
   }
-  #mobil-menu #logotype {
+  #top-menu-mobil #logotype {
     width: 60vw;
+  }
+  .end-arrow {
+    display: none;
   }
   #desktop-menu {
     display: none;
+  }
+  #main-menu {
+    display: none;
+  }
+  section.main {
+    margin-top: 0;
   }
   .boxes {
     display: block;
@@ -76,7 +154,7 @@ hr {
   }
   .footer {
     padding-top: 2rem;
-    padding-bottom: 4rem;
+    padding-bottom: 6rem;
     padding-inline: 1rem;
     display: grid;
     grid-template-columns: 1fr;
@@ -102,22 +180,11 @@ hr {
     display: block;
     margin-bottom: 1rem;
   }
-  #desktop-menu #search-box {
-    outline: none;
-  }
   #desktop-menu #logotype-and-search {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-block: 1rem;
-  }
-  #desktop-menu #search {
-    border: solid 2px rgb(207, 207, 207);
-    padding: 0.8rem;
-    border-radius: 0.3rem;
-  }
-  #desktop-menu #search input {
-    border: none;
   }
   #Lyssna {
     text-align: right;
@@ -163,9 +230,6 @@ hr {
     width: 100vw;
     height: 70vh;
   }
-  .hide {
-    display: none;
-  }
   .togglemenu-content {
     display: flex;
     flex-direction: column;
@@ -199,11 +263,11 @@ hr {
   }
   .boxes #box-4 {
     grid-area: 3/1/span 1/span 3;
-    height: 25rem;
+    height: 20rem;
   }
   .boxes #box-5 {
     grid-area: 3/4/span 1/span 3;
-    height: 25rem;
+    height: 20rem;
   }
   .boxes .text-container {
     height: 44rem;
@@ -217,9 +281,27 @@ hr {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column: 1fr;
-    padding-block: 2rem;
+    padding-block: 3rem;
   }
 }
+.search {
+  border: solid 2px rgb(207, 207, 207);
+  padding: 0.8rem;
+  border-radius: 0.3rem;
+}
+.search input {
+  border: none;
+}
+
+#search-mobil {
+  margin-inline: 1rem;
+  margin-bottom: 2rem;
+}
+
+.search-box {
+  outline: none;
+}
+
 .main {
   margin-top: 3rem;
 }
@@ -255,6 +337,7 @@ hr {
   border-radius: 1rem;
   margin-inline: 1rem;
   margin-bottom: 2rem;
+  position: relative;
 }
 .boxes .box-container .image-box {
   width: 100%;
@@ -264,9 +347,6 @@ hr {
 .boxes .box-container .text-container {
   padding: 1rem;
   background-color: white;
-}
-.boxes .box-container .text-container i {
-  float: right;
 }
 .boxes .box-container a {
   text-decoration: none;
@@ -286,9 +366,9 @@ hr {
 .boxes .box-container .end-arrow {
   padding: 1rem;
   padding-bottom: 1.2rem;
-}
-.boxes .box-container .end-arrow i {
-  float: right;
+  position: absolute;
+  right: 2%;
+  bottom: 1%;
 }
 
 .news {

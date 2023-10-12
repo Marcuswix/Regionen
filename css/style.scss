@@ -3,16 +3,14 @@
 
 body
 {
-
 font-family: 'Montserrat', sans-serif;
 color: #2D2D2B;
 position: relative;
-
 }
 
-hr{
+hr
+{
     margin: 0;
-
 }
 
 // "To the top" - button
@@ -48,14 +46,108 @@ hr{
 @media(min-width: 320px)
 {
 
-// Main menu
+#to-the-top
+{
+    display: none;
+}
+
+hr{
+    display: none;
+}
+
+#btn-search
+{
+   display: flex;
+   align-items: center;
+   margin: auto;
+   border: none;
+   background-color: transparent;
+}
+
 #mobil-menu
 {
- display: flex;
- justify-content: space-between;
+    ul
+    {
+
+        margin-inline: 1rem;
+        padding: 0;
+    }
+    li{
+        list-style-type: none;
+        padding: 6px 16px;
+        background-color: #f2f2f2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        &:active
+        {
+            background-color: #f2f2f297; 
+        }
+    }
+
+    a{
+        color:#2D2D2B;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.2rem;
+
+        &:hover
+        {
+            text-decoration: underline;
+        }
+    }
+
+    .mobil-menu-btn
+    {
+        border-radius: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        width: 48px;
+        height: 48px;
+        background-color: #d7d7d7;
+    }
+
+    #btn-bars
+    {
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+    }
+
+    #xmark
+    {
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+    }
+}
+
+.hide
+{
+    display: none !important;
+}
+
+.show-top-menu-mobil
+{
+    display: block;
+    z-index: 1;
+}
+
+// Main menu
+#top-menu-mobil
+{
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
  align-items: center;
  width: 100vw;
- padding: 1.5rem;
+ padding: 2rem;
  column-gap: 1rem;
 
     i
@@ -68,12 +160,26 @@ hr{
     {
     width: 60vw;
     }
+}
 
+.end-arrow
+{
+    display: none;
 }
 
 #desktop-menu
 {
     display: none;
+}
+
+#main-menu
+{
+    display: none;
+}
+
+// Section 2 - "Main image"
+section.main{
+    margin-top: 0;
 }
 
 
@@ -84,6 +190,7 @@ hr{
         margin: auto;
         padding-block: 2rem;
     }
+
 
 // Section 4 Nyheter
 .news{
@@ -110,7 +217,7 @@ hr{
 .footer
 {
     padding-top: 2rem;
-    padding-bottom: 4rem;
+    padding-bottom: 6rem;
     padding-inline: 1rem;
     display: grid;
     grid-template-columns: 1fr;
@@ -156,30 +263,12 @@ hr{
         display: block;
         margin-bottom: 1rem;
 
-        #search-box
-        {
-            outline: none;
-        }
-
-        
         #logotype-and-search
         {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding-block: 1rem;
-        }
-
-        #search
-        {
-            border: solid 2px rgb(207, 207, 207);
-            padding: 0.8rem;
-            border-radius: 0.3rem;
-
-            input
-            {
-                border: none;
-            }
         }
     }
 
@@ -240,11 +329,6 @@ hr{
         height: 70vh;
     }
 
-    .hide
-    {        
-        display: none;
-    }
-
     .togglemenu-content
     {
         display: flex;
@@ -294,13 +378,13 @@ hr{
         #box-4
         {
             grid-area: 3 / 1 / span 1 / span 3;
-            height: 25rem;
+            height: 20rem;
         }
 
         #box-5
         {
             grid-area: 3 / 4 / span 1 / span 3;
-            height: 25rem;
+            height: 20rem;
         }
 
         .text-container
@@ -324,28 +408,52 @@ hr{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-column: 1fr;
-        padding-block: 2rem;
+        padding-block: 3rem;
     }
-
 }
 
 
 
-////////
+///////////////////////////////
+// BOTH MOBIL AND DESKTOP 
 
-// Main Image
+//Header
+.search
+{
+    border: solid 2px rgb(207, 207, 207);
+    padding: 0.8rem;
+    border-radius: 0.3rem;
+
+    input
+    {
+        border: none;
+    }
+}
+
+#search-mobil
+{
+    margin-inline: 1rem;
+    margin-bottom: 2rem;
+}
+
+.search-box
+{
+    outline: none;
+}
+
+
+// Section 2 - "Main Image"
 .main
 {
     margin-top: 3rem;
+
     .image-container
 {
-
     position: relative;
     width: 100vw;
     height: auto;
     overflow: hidden;
     z-index: -0;
-
 
     #main-image
     {
@@ -369,12 +477,11 @@ hr{
     width: 100%;
     height: 6rem;
     background-color: #F0FAF0;
-
 }
 
 }
 
-// Section - "Boxes"
+// Section 3 - "Boxes"
 .boxes
 {   
     background: linear-gradient(to left, #006b88, #00495D, #00495D, #00495D,#006b88);
@@ -386,7 +493,7 @@ hr{
         margin-inline: 1rem;
         
         margin-bottom: 2rem;
-
+        position: relative;
 
         .image-box
         {
@@ -399,11 +506,6 @@ hr{
         {
             padding: 1rem;
             background-color: white;
-
-        i{
-            float: right;
-        }
-
         }
 
         a
@@ -430,12 +532,10 @@ hr{
         {
             padding:1rem;
             padding-bottom: 1.2rem;
-            i{
-                float: right;
-
-            }
+            position: absolute;
+            right: 2%;
+            bottom: 1%; 
         }
-
     }
 }
 
@@ -515,7 +615,6 @@ hr{
         position: absolute;
         bottom: 0;
     }
-
 }
 
 .footer
