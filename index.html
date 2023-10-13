@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="keywords" content="">
+<meta name="description" content="Region Halland arbetar för att erbjuda en god hälso- och sjukvård och främja en hållbar utveckling i regionen. Vår vision är att göra Halland till den bästa livsplatsen.">
+<meta name="keywords" content="Hälsa, vård, sjukvård, landsting, region">
 <script defer src="https://kit.fontawesome.com/4d5d7d75c3.js" crossorigin="anonymous">
 </script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -39,14 +39,30 @@
     <!-- Mobil menu choices -->
     <nav id="mobil-menu-list" class="hide">
     <ul>
-     <li><a href="#">Utveckling och tillväxt</a><button class="mobil-menu-btn"><i class="fa-solid fa-plus"></i></button></li>
-     <li><a href="#">Jobb och karriär</a><button class="mobil-menu-btn"><i class="fa-solid fa-plus"></i></button></li>
-     <li><a href="#">Demokrati och politik</a><button class="mobil-menu-btn"><i class="fa-solid fa-plus"></i></button></li>
-     <li><a href="#">Hälsa och vård</a><button class="mobil-menu-btn"><i class="fa-solid fa-plus"></i></button></li>
-     <li><a href="#">Om Region Halland</a><button class="mobil-menu-btn"><i class="fa-solid fa-plus"></i></button></li>
-     <li><a href="#">Kultur</a><button class="mobil-menu-btn"><i class="fa-solid fa-plus"></i></button></li>
-     <li><a href="#">Våra skolor</a><button class="mobil-menu-btn"><i class="fa-solid fa-plus"></i></button></li>
-     <li><a href="index.html">Förstasidan</a><button class="mobil-menu-btn"><i class="fa-solid fa-plus"></i></button></li>
+    <li><a href="#">Utveckling och tillväxt</a>
+    <button id="btn-devlopment" class="mobil-menu-btn" onclick="showSubmenuDevlopment()"><i class="fa-solid fa-plus"></i>
+    </button></li>
+    
+    <nav id="development-subheadlines" class="hide">
+        <ul>
+        <li><a href="#">Samhällsplanering och trafik</a></li>
+        <li><a href="#">Gör omställning</a></li>
+        <li><a href="#">Näringslivsutveckling</a></li>
+        <li><a href="#">Utbildning och kompetens</a></li>
+        <li><a href="#">Stöd och finansiering</a></li>
+        <li><a href="#">Halland över gränserna</a></li>
+        <li><a href="#">Vårt utveckllingsupdrag</a></li>
+        <li><a href="#">Hälsa för alla</a></li>
+        </ul>
+    </nav>
+
+    <li><a href="#">Jobb och karriär</a><button class="mobil-menu-btn"><i class="fa-solid fa-plus"></i></button></li>
+    <li><a href="#">Demokrati och politik</a><button class="mobil-menu-btn"><i class="fa-solid fa-plus"></i></button></li>
+    <li><a href="#">Hälsa och vård</a><button class="mobil-menu-btn"><i class="fa-solid fa-plus"></i></button></li>
+    <li><a href="#">Om Region Halland</a><button class="mobil-menu-btn"><i class="fa-solid fa-plus"></i></button></li>
+    <li><a href="#">Kultur</a><button class="mobil-menu-btn"><i class="fa-solid fa-plus"></i></button></li>
+    <li><a href="#">Våra skolor</a><button class="mobil-menu-btn"><i class="fa-solid fa-plus"></i></button></li>
+    <li><a href="index.html">Förstasidan</a><button class="mobil-menu-btn"><i class="fa-solid fa-plus"></i></button></li>
     </ul> 
     </nav>
 
@@ -359,8 +375,8 @@
         <p>Vi tar nu första steget för att skapa förutsättningar för en god hälso- och sjukvård i Halland under många år framöver.</p>
         <div class="end-arrow"><i class="fa-solid fa-arrow-right"></i></div>
     </div>
-    </a>
-    <div class="end-arrow"><i class="fa-solid fa-arrow-right"></i></div> 
+    <div class="end-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+    </a> 
 </div>
 
 <!-- Box 3 -->
@@ -371,6 +387,7 @@
         <p>Vi tar nu första steget för att skapa förutsättningar för en god hälso- och sjukvård i Halland under många år framöver.</p>
         <div class="end-arrow"><i class="fa-solid fa-arrow-right"></i></div>
     </div>
+    <div class="end-arrow"><i class="fa-solid fa-arrow-right"></i></div>
     </a> 
 </div>
 
@@ -443,11 +460,12 @@
 
 </Section>
 
-<!-- FOOTER -->
+<!-- TOP OF FOOTER-->
 <section class="green-wave">
     <img id="green-wave" src="images/footer-wave.svg" alt="A green design element">
 </section>
 
+<!-- FOOTER -->
 <footer class="section footer">
 
 <!-- Box 1 -->
@@ -500,6 +518,7 @@
 <img id="blob-right" src="images/blob-right.svg">
 
 <img id="blob-left" src="images/blob-left.svg">
+
 </footer>
 
 <script src="js/script.js"></script>

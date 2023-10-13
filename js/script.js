@@ -37,13 +37,17 @@ function showActiveColumn(target) {
 
 }
 
+let hoverTimeout;
 const menuItems = document.querySelectorAll('.main-menu-items');
 
 menuItems.forEach(item => {
     item.addEventListener('mouseenter', function(event) {
-        console.log(event)
+        // console.log(event)
+        hoverTimeout = setTimeout(function ()
+        {
         hideAllColumns(menuItems)
         showActiveColumn(item.dataset.target)
+        }, 100);
     })
 })
 
@@ -90,5 +94,21 @@ function showSearch ()
     }
 }
 
+
+//Show submenu mobil
+const showSubmenu = document.getElementById("development-subheadlines")
+
+function showSubmenuDevlopment()
+{
+    if (showSubmenu.classList.contains("hide"))
+    {
+        showSubmenu.classList.remove("hide")
+    }
+
+    else
+    {
+        showSubmenu.classList.add("hide")
+    }
+}
 
 

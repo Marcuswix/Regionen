@@ -129,6 +129,21 @@ hr{
     }
 }
 
+#development-subheadlines
+{
+    li
+    {
+        background-color: transparent;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    a
+    {
+        font-size: 16px;
+    }
+}
+
 .hide
 {
     display: none !important;
@@ -222,17 +237,18 @@ section.main{
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 2rem;
+    position: relative;
     
 }
 
 #blob-right
 {
-    width: 16vw;
+    width: 25vw;
 }
 
 #blob-left
 {
-    width: 16vw
+    width: 25vw;
 }
 
 }
@@ -245,6 +261,12 @@ section.main{
 
 //Main menu
 {
+
+    hr
+    {
+        display: block;
+    }
+
     .menu
     {
         padding-inline: 16rem;
@@ -346,9 +368,20 @@ section.main{
         }
     }
 
+    // Section 2 - "Main image
+    section.main
+    {
+        margin-top: 2rem;
+    }
+
     // Section 3 - "Boxes"
     .boxes
-    {
+    {   .end-arrow
+        {
+            display: flex;
+        }
+
+
         padding-inline: 16rem;
         display: grid;
         grid-template-columns: auto auto auto;
@@ -408,7 +441,18 @@ section.main{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-column: 1fr;
-        padding-block: 3rem;
+        padding-top: 3rem;
+        padding-bottom: 6rem;
+
+        #blob-right
+    {
+    width: 16vw;
+    }
+
+    #blob-left
+    {   
+    width: 16vw;
+    }
     }
 }
 
